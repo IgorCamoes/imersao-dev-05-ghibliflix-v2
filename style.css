@@ -1,0 +1,194 @@
+body {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+  text-align: center;
+  background-image: url("https://w.wallhaven.cc/full/k7/wallhaven-k762j7.png");
+  background-color: #000000;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fafafa;
+  padding: 50px 0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #ffffff;
+  word-break: keep-all;
+  margin: 0 0 25px;
+  text-decoration: underline 3px;
+  text-underline-offset: 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 100px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+img {
+  max-height: 250px;
+}
+
+.mini-nav{
+  font-size: 1.3em;
+  margin: 10px 0;
+}
+
+.mini-nav span{
+  transition: 750ms;
+  cursor: pointer;
+}
+
+.selected{
+  font-weight: 900;
+  text-decoration: underline 2px;
+  text-underline-offset: 2px;
+}
+
+.main-wrapper{
+  margin: 0 auto;
+  width: 95%;
+  opacity: 1;
+  transition: 750ms;
+}
+
+.main-wrapper .grade{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  transition: 750ms;
+  
+}
+
+.filme-card{
+  background: #ebebeb;
+  border-radius: 15px;
+  color: #0e0e0e;
+  cursor: pointer;
+  padding: 5px 0 20px;
+  transition: 150ms;
+}
+
+
+.filme-about{
+  background: rgba(235, 235, 235, 0.9);
+  border-radius: 15px;
+  color: #0e0e0e;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  padding: 45px 50px;
+  position: relative;
+}
+
+.filme-about .titulo{
+  font-size: 0.850em;
+  opacity: 60%;
+}
+
+.filme-about p, .filme-about h2, .filme-about h3{
+  text-align: left;
+}
+
+.filme-about hr{
+  border-top: 1px solid #0e0e0e;
+  margin: 0;
+  width: 50%;
+}
+
+.filme-about .info{
+  max-width: 60%;
+}
+.filme-about .capa{
+  max-width: 30%;
+}
+
+.filme-about .capa hr{
+  margin: 0 auto;
+}
+
+.heart{
+  cursor: pointer;
+  filter: grayscale(100%) drop-shadow(0 0 0 #727272);
+  transition: 750ms;
+}
+
+.favorite{
+  filter: grayscale(0);
+}
+
+.voltar{
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.opacity-0{
+  opacity: 0;
+}
+
+
+@media(max-width: 1000px){
+  .main-wrapper .grade{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filme-about .info img{
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 768px){
+  .hifen{
+    display: none;
+  }
+  .main-wrapper .grade{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .filme-about p, .filme-about h2, .filme-about h3{
+    text-align: justify;
+  }
+
+  .filme-about{
+    flex-direction: column-reverse;
+    font-size: 0.9em;
+  }
+
+  .filme-about hr{
+    width: 150px;
+  }
+
+  .filme-about .info, .filme-about .capa {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.f-o-i{
+  animation: fade-out-in 750ms linear;
+}
+
+
+@keyframes fade-out-in {
+  from{opacity: 0;}
+  to{opacity: 100%;}
+}
+
